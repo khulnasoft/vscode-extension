@@ -4,15 +4,8 @@
   "icon": "resources/vscode-khulnasoft-xs.png",
   "version": "2.2.1",
   "description": "KhulnaSoft integration for Visual Studio Code.",
-  "categories": [
-    "Other"
-  ],
-  "keywords": [
-    "khulnasoft",
-    "khulnasoft.com",
-    "react",
-    "next.js"
-  ],
+  "categories": ["Other"],
+  "keywords": ["khulnasoft", "khulnasoft.com", "react", "next.js"],
   "homepage": "https://github.com/khulnasoft/vscode-khulnasoft#readme",
   "bugs": {
     "url": "https://github.com/khulnasoft/vscode-khulnasoft/issues"
@@ -56,9 +49,7 @@
         "vercel.files.exclude": {
           "markdownDescription": "Configure glob patterns to exclude projects from. Inherits all glob patterns from the [Files: Exclude]() setting.",
           "type": "array",
-          "default": [
-            "**/node_modules"
-          ]
+          "default": ["**/node_modules"]
         },
         "vercel.logs.autorefresh": {
           "description": "When set to true, build logs (deployment events) will automatically be fetched and updated every few seconds.",
@@ -470,10 +461,7 @@
       }
     ]
   },
-  "activationEvents": [
-    "onStartupFinished",
-    "onFileSystem:vscode-khulnasoft-files"
-  ],
+  "activationEvents": ["onStartupFinished", "onFileSystem:vscode-khulnasoft-files"],
   "bundleDependencies": [
     "@sindresorhus/slugify",
     "ms",

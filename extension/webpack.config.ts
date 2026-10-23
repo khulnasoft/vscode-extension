@@ -110,10 +110,7 @@ const browserConfig = {
 const testConfig = {
   ...sharedConfig,
   name: 'build-tests',
-  entry: [
-    './src/test.ts',
-    ...glob.globSync('./src/**/*.test.ts', {dotRelative: true}),
-  ],
+  entry: ['./src/test.ts', ...glob.globSync('./src/**/*.test.ts', {dotRelative: true})],
   output: {
     ...sharedConfig.output,
     filename: 'extension.test.js',

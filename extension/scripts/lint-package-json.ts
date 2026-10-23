@@ -46,9 +46,7 @@ const views = Object.values(contributes.views)
   .map((v) => v.id)
 
 // make sure welcome views reference to correct views
-const missingViews = contributes.viewsWelcome
-  .map((v) => v.view)
-  .filter((v) => !views.includes(v))
+const missingViews = contributes.viewsWelcome.map((v) => v.view).filter((v) => !views.includes(v))
 for (const view of missingViews) {
   error(`A welcome view is provided for view "${view}" which doesn't exit!`)
 }

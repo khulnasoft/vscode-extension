@@ -9,3 +9,4 @@
 
 # for demo
 /acme-store
+.env*

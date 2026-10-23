@@ -1,9 +1,9 @@
 import {
   defineConfig,
+  presetIcons,
   presetTypography,
   presetWind,
   transformerDirectives,
-  presetIcons,
 } from 'unocss'
 import {presetRadixColors} from 'unocss-preset-radix-colors'
 import {type Theme, theme} from 'unocss/preset-wind'

@@ -1,9 +1,9 @@
 import * as vscode from 'vscode'
 import {CommandId} from '../constants'
 import {Injectable} from '../lib'
-import {LinkFolderToProjectCommand} from './link-folder-to-project-command'
 import {AuthenticationStateProvider} from '../state/authentication-state-provider'
 import {showUnauthorizedErrorMessage} from '../utils/errors'
+import {LinkFolderToProjectCommand} from './link-folder-to-project-command'
 
 @Injectable()
 export class LinkWorkspaceToProjectCommand implements vscode.Disposable {

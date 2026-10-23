@@ -8,8 +8,8 @@ import {showLinkedProjectQuickPick} from '../quickpicks/show-linked-project-quic
 import {AuthenticationStateProvider} from '../state/authentication-state-provider'
 import {LinkedProjectsStateProvider} from '../state/linked-projects-state-provider'
 import {fileExists, recordToDotenv, writeFile} from '../utils'
-import {VercelApiClient} from '../vercel-api-client'
 import {showUnauthorizedErrorMessage} from '../utils/errors'
+import {VercelApiClient} from '../vercel-api-client'
 
 @Injectable()
 export class PullEnvsCommand implements vscode.Disposable {

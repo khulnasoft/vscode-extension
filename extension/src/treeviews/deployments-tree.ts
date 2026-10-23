@@ -10,18 +10,18 @@ import {
 } from '../constants'
 import {Injectable} from '../lib'
 import {VercelDeployment} from '../models/vercel-deployment'
+import {
+  DeploymentQuickPickAction,
+  showDeploymentActionsQuickPick,
+} from '../quickpicks/show-deployment-actions-quickpick'
 import {showDeploymentFiltersQuickPick} from '../quickpicks/show-deployment-filters-quickpick'
+import {AuthenticationStateProvider} from '../state/authentication-state-provider'
 import {DeploymentFiltersStateProvider} from '../state/deployment-filters-state-provider'
 import {DeploymentsStateProvider} from '../state/deployments-state-provider'
 import {ExtensionConfigStateProvider} from '../state/extension-config-state-provider'
 import {CustomIcon, GitBranch, GitCommit} from '../types'
 import {capitalize, withMarkdownUrl} from '../utils'
-import {
-  DeploymentQuickPickAction,
-  showDeploymentActionsQuickPick,
-} from '../quickpicks/show-deployment-actions-quickpick'
 import {VercelApiClient} from '../vercel-api-client'
-import {AuthenticationStateProvider} from '../state/authentication-state-provider'
 
 const deploymentStatusIcons = {
   INITIALIZING: 'issue-draft',

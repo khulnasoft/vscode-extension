@@ -2,9 +2,9 @@ import * as vscode from 'vscode'
 import {Injectable} from '../lib'
 import {VercelProject} from '../models/vercel-project'
 import {diffArrays, uniqueBy} from '../utils'
-import {LinkedProjectsStateProvider} from './linked-projects-state-provider'
-import {VercelApiClient} from '../vercel-api-client'
 import {VercelApiError} from '../utils/errors'
+import {VercelApiClient} from '../vercel-api-client'
+import {LinkedProjectsStateProvider} from './linked-projects-state-provider'
 
 export type OnDidChangeProjectsEvent = {
   added: readonly VercelProject[]

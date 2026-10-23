@@ -1,5 +1,5 @@
-import path from 'pathe'
 import {runTests} from '@vscode/test-electron'
+import path from 'pathe'
 
 try {
   // The folder containing the Extension Manifest package.json
