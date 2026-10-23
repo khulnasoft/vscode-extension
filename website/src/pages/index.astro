@@ -1,0 +1,53 @@
+---
+import AnalyticsScript from '../components/AnalyticsScript.astro'
+import Features from '../components/Features.astro'
+import Footer from '../components/Footer.astro'
+import Hero from '../components/Hero.astro'
+import InlineStyles from '../components/InlineStyles.astro'
+import Install from '../components/Install.astro'
+import MetaTags from '../components/MetaTags.astro'
+import NavBar from '../components/NavBar.astro'
+import ThemeScript from '../components/ThemeScript.astro'
+
+const preloadFonts: AbsoluteFontFilePath[] = [
+  '/fonts/bricolage-grotesque-latin-400-normal.woff2',
+  '/fonts/bricolage-grotesque-latin-600-normal.woff2',
+]
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <MetaTags
+      path="/"
+      title="VSCode KhulnaSoft"
+      description="Keep an eye on your Vercel deployments while you code"
+      ogImage="/og.png"
+    />
+    {preloadFonts.map((path) => <link rel="preload" href={path} as="font" type="font/woff2" crossorigin />)}
+    <InlineStyles />
+    <AnalyticsScript />
+    <ThemeScript />
+  </head>
+  <body class="w-full bg-gray-1 text-gray-12 text-xl sm:text-lg font-sans">
+    <NavBar />
+    <main class="pt-28 px-5 max-w-7xl mx-auto flex flex-col">
+      <section class="w-full">
+        <Hero />
+      </section>
+      <section id="features" class="mt-30 pt-10 w-full">
+        <Features />
+      </section>
+      <section id="install" class="mt-20 pt-10 mb-40 w-full">
+        <Install />
+      </section>
+      <!-- Invisible element with classNames just to prevent prunes. -->
+      <div class="hidden bg-gray-1 bg-gray-2 bg-gray-3 bg-gray-4 bg-gray-10"></div>
+    </main>
+    <Footer />
+  </body>
+</html>
